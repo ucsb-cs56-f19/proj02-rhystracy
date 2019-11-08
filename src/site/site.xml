@@ -1,1 +1,9 @@
-i
+<project>
+  <body>
+    <menu name="Documentation">
+      <item name="Javadoc" href="apidocs" />
+      <item name="Javadoc (test code)" href="testapidocs" />
+      <item name="Jacoco (test coverage)" href="jacoco" />
+    </menu>
+  </body>
+</project>
