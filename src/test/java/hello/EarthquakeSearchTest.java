@@ -46,6 +46,7 @@ public class EarthquakeSearchTest {
         principal = OAuthUtils.createOAuth2User("Chris Gaucho", "cgaucho@example.com");
     }
 
+
     @Test
     @WithMockUser
     public void getEarthquakeSearch() throws Exception {
