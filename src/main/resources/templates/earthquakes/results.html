@@ -10,20 +10,46 @@
 
       <h1>Earthquake Search Results</h1>
 
-      <table>
-	      <tr>
-		      <th>Distance (km)</th>
-		      <td th:text="${eqSearch.distance}"></td>
-	      </tr>
-	      <tr>
-		      <th>Minimum Magnitude</th>
-		      <td th:text="${eqSearch.minmag}"></td>
-	      </tr>
-      </table>
+      <table class="table">
+	      <thead>
+		      <tr>
+			      <th>URL</th>
+			      <th>Count</th>
+			      <th>Distance (km)</th>
+			      <th>Minimum Magnitude</th>
+		      </tr>
+	      </thead>
+	      <tbody>
+		      <tr>
+			      <td th:text="${featureCollection.metadata.url}"></td>
+			      <td th:text="${featureCollection.metadata.count}"></td>
+			      <td th:text="${eqSearch.distance}"></td>
+			      <td th:text="${eqSearch.minmag}"></td>
+		      </tr>
+	      </tbody>
+	</table>
+	
 
-      <h2>JSON Results</h2>
+	<h3>Earthquakes</h3>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>title</th>
+				<th>id</th>
+				<th>place</th>
+				<th>mag</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="f: ${featureCollection.features}">
+				<td><a th:href="${f.properties.url}" th:text="${f.properties.title}"></td>
+				<td><a th:href="${f.properties.url}" th:text="${f.id}"></td>
+				<td th:text="${f.properties.place}"></td>
+				<td th:text="${f.properties.mag}"></td>
+			</tr>
+		</tbody>
+	</table>
 
-      <pre th:text="${json}">This is a placeholder</pre>
 
       <div th:replace="bootstrap/bootstrap_footer.html"></div>
     </div>
