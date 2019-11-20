@@ -5,5 +5,6 @@ public class Properties {
 	public String place;
 	public String type;
 	public String title;
+	public String url;
 }
 
