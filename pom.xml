@@ -44,7 +44,7 @@
     <distributionManagement>
         <site>
             <id>website</id>
-            <url>file://${project.basedir}/docs/</url>
+            <url>file://${project.basedirdocs/</url>
         </site>
     </distributionManagement>
     <!-- (21) <properties/> -->
@@ -146,6 +146,13 @@
             <artifactId>jacoco-maven-plugin</artifactId>
             <version>0.8.5</version>
     	</dependency>
+
+	<dependency>
+	    <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>2.22.0</version>
+	    <scope>test</scope>
+	</dependency>
 
     </dependencies>
     <!-- (24) <repositories/> -->
