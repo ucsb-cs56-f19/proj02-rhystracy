@@ -44,7 +44,7 @@
     <distributionManagement>
         <site>
             <id>website</id>
-            <url>file://${project.basedirdocs/</url>
+            <url>file://${project.basedir}/docs/</url>
         </site>
     </distributionManagement>
     <!-- (21) <properties/> -->
@@ -85,12 +85,6 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-oauth2-client</artifactId>
             <optional>true</optional>
-    	</dependency>
-
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-test</artifactId>
-            <scope>test</scope>
         </dependency>
 
         <dependency>
@@ -145,26 +139,23 @@
             <groupId>org.jacoco</groupId>
             <artifactId>jacoco-maven-plugin</artifactId>
             <version>0.8.5</version>
-    	</dependency>
+        </dependency>
 
-	<dependency>
-	    <groupId>org.mockito</groupId>
+        <dependency>
+            <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
             <version>2.22.0</version>
-	    <scope>test</scope>
+            <scope>test</scope>
         </dependency>
-	
-	<dependency>
-	    <groupId>com.fasterxml.jackson.core</groupId>
-	    <artifactId>jackson-core</artifactId>
-	    <version>2.10.0</version>
-	</dependency>
 
-	<dependency>
-	    <groupId>com.fasterxml.jackson.core</groupId>
-	    <artifactId>jackson-databind</artifactId>
-	    <version>2.10.0</version>
-	</dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-test -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+
     </dependencies>
     <!-- (24) <repositories/> -->
     <!-- (25) <pluginRepositories/> -->
@@ -207,8 +198,7 @@
                     <archive>
                         <manifest>
                             <!-- full package name of class with the main you want to run -->
-			    <mainClass>hello.Application</mainClass>
-
+                            <mainClass>hello.Application</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
