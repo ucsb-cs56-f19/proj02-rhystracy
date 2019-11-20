@@ -31,11 +31,15 @@
 	      <thead>
 		      <tr>
 			      <th>Type</th>
+			      <th>URL</th>
+			      <th>Count</th>
 		      </tr>
 	      </thead>
 	      <tbody>
 		      <tr>
 			      <td th:text="${featureCollection.type}"></td>
+			      <td th:text="${featureCollection.metadata.url}"></td>
+			      <td th:text="${featureCollection.metadata.count}"></td>
 		      </tr>
 	      </tbody>
 	</table>
