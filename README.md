@@ -3,6 +3,8 @@ Javadoc/Jacoco github page: https://ucsb-cs56-f19.github.io/lab07-rhystracy/
 
 Running Heroku App: https://cs56-f19-lab07-rhystracy.herokuapp.com/
 
+Travis CI: https://travis-ci.org/ucsb-cs56-f19/lab07-rhystracy/builds/617560316?utm_source=github_status&utm_medium=notification
+
 
 A simple Spring Boot webapp using:
 * Thymeleaf templating
