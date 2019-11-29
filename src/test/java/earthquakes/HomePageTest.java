@@ -72,18 +72,26 @@ public class HomePageTest {
     }
 
     @Test
-    public void getHomePage_hasCorrectLinkPage1() throws Exception {
+    public void getHomePage_hasCorrectLinkEarthquakes() throws Exception {
+        mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.TEXT_HTML))
+                .andExpect(status().isOk())
+                .andExpect(xpath("/html/body/div/nav/div/ul/li[1]/a").exists())
+                .andExpect(xpath("/html/body/div/nav/div/ul/li[1]/a").string("Earthquake Search"));
+    }
+
+    @Test
+    public void getHomePage_hasCorrectLinkLocations() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.TEXT_HTML))
                 .andExpect(status().isOk())
                 .andExpect(xpath("/html/body/div/nav/div/ul/li[2]/a").exists())
-                .andExpect(xpath("/html/body/div/nav/div/ul/li[2]/a").string("Earthquakes"));
+                .andExpect(xpath("/html/body/div/nav/div/ul/li[2]/a").string("Locations"));
     }
 
     @Test
     public void getHomePage_hasCorrectLinkUsers() throws Exception {
-        mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.TEXT_HTML))
-                .andExpect(status().isOk())
-                .andExpect(xpath("/html/body/div/nav/div/ul/li[3]/a").exists())
-                .andExpect(xpath("/html/body/div/nav/div/ul/li[3]/a").string("Users"));
+	    mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.TEXT_HTML))
+		.andExpect(status().isOk())
+		.andExpect(xpath("/html/body/div/nav/div/ul/li[3]/a").exists())
+		.andExpect(xpath("/html/body/div/nav/div/ul/li[3]/a").string("Users"));
     }
 }
