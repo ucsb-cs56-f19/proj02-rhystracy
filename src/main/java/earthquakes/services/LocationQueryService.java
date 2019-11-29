@@ -23,7 +23,7 @@ public class LocationQueryService {
 
     private Logger logger = LoggerFactory.getLogger(LocationQueryService.class);
 
-    public String getJSON(int location) {
+    public String getJSON(String location) {
         String fakeJson = "{ \"key\": \"value\" }";
 	String json = fakeJson;
 	logger.info("json=" + json);

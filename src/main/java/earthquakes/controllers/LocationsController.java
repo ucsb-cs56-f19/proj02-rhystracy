@@ -12,6 +12,7 @@ import java.util.Map;
 import java.util.HashMap;
 
 import earthquakes.searches.LocSearch;
+import earthquakes.services.LocationQueryService;
 
 import com.nimbusds.oauth2.sdk.client.ClientReadRequest;
 
