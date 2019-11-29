@@ -16,7 +16,7 @@
     <groupId>edu.ucsb.cs56</groupId>
 
     <!-- (3) <artifactId/> -->
-    <artifactId>lab07</artifactId>
+    <artifactId>proj01</artifactId>
 
     <!-- (4) <version/> -->
     <version>0.1.0</version>
@@ -24,7 +24,7 @@
     <!-- (5) <packaging/> -->
     <packaging>jar</packaging>
     <!-- (6) <name/> -->
-    <name>lab07</name>
+    <name>proj01</name>
     <!-- (7) <description/> -->
     <!-- (8) <url/> -->
     <url>https://ucsb-cs56.github.io/f19/lab/lab07/</url>
@@ -217,7 +217,7 @@
                     <archive>
                         <manifest>
                             <!-- full package name of class with the main you want to run -->
-                            <mainClass>hello.Application</mainClass>
+                            <mainClass>earthquakes.Application</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
