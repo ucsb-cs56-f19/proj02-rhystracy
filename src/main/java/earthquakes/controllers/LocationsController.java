@@ -29,7 +29,7 @@ public class LocationsController {
     
     @GetMapping("/locations/results")
     public String getLocationsResults(Model model, OAuth2AuthenticationToken oAuth2AuthenticationToken, LocSearch locSearch){
-	    //model.addAttribute("locSearch", locSearch);
+	    model.addAttribute("locSearch", locSearch);
 	    return "locations/results";
     }
 }
