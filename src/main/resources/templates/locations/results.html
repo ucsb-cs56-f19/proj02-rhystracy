@@ -10,21 +10,29 @@
 
       <h1>Location Search Results</h1>
 
-      <table class="table">
-	      <thead>
-		      
-		      <tr>
-			      <th>Location</th>
-		      </tr>
-	      </thead>
-	      <tbody>
-		      <tr>
-			      
-			      <td th:text="${json}"></td>
-			      
-		      </tr>
-	      </tbody>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Place ID</th>
+				<th>Latitude</th>
+				<th>Longitude</th>
+				<th>Display Name</th>
+				<th>Type</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="place: ${places}">
+				<td th:text="${place.place_id}"></td>
+				<td th:text="${place.lat}"></td>
+				<td th:text="${place.lon}"></td>
+				<td th:text="${place.display_name}"></td>
+				<td th:text="${place.type}"></td>
+			</tr>
+		</tbody>
 	</table>
+				
+				
+				
 	
 
 	<!--<h3>Earthquakes</h3>
