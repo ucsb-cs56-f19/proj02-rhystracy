@@ -31,6 +31,7 @@ public class Place{
 	public static List<Place> listFromJson(String json){
 		try {
 			ObjectMapper mapper = new ObjectMapper();
+			mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 			List<Place> myObjects = mapper.readValue(json, new TypeReference<List<Place>>(){});
 			return myObjects;
 		} catch (JsonProcessingException jpe) {
