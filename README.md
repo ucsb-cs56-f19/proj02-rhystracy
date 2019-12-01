@@ -1,9 +1,9 @@
 
-Javadoc/Jacoco github page: https://ucsb-cs56-f19.github.io/proj01-rhystracy/
+Javadoc/Jacoco github page: https://ucsb-cs56-f19.github.io/proj02-rhystracy/
 
-Running Heroku App: https://cs56-f19-proj01-rhystracy.herokuapp.com/
+Running Heroku App: https://cs56-f19-proj02-rhystracy.herokuapp.com/
 
-Travis CI: https://travis-ci.com/ucsb-cs56-f19/proj01-rhystracy
+Travis CI: https://travis-ci.com/ucsb-cs56-f19/proj02-rhystracy
 
 
 A simple Spring Boot webapp using:
