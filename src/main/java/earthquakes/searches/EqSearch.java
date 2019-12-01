@@ -27,7 +27,7 @@ public class EqSearch{
 		lon = l;
 	}
 
-	public void setLocation(double loc){
+	public void setLocation(String loc){
 		location = loc;
 	}
 
