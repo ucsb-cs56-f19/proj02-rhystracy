@@ -32,6 +32,7 @@
 				<th>Display Name</th>
 				<th>Type</th>
 				<th>Get Earthquakes</th>
+				<th>Add to Favorites</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -42,6 +43,15 @@
 				<td th:text="${place.display_name}"></td>
 				<td th:text="${place.type}"></td>
 				<td><a th:href="@{/earthquakes/search/(lat=${place.lat},lon=${place.lon},location=${place.display_name})}">Get Earthquakes</a></td>
+				<td>
+					<form action="#" th:action="@{/locations/add}"  th:object="${location}"  method="post">
+						<input type="hidden" name="placeId" th:value="${place.place_id}" value=""/>
+						<input type="hidden" name="name" th:value="${place.display_name}" value=""/>
+						<input type="hidden" name="latitude" th:value="${place.lat}" value=""/>
+						<input type="hidden" name="longitude" th:value="${place.lon}" value=""/>
+						<input type="submit" class="btn btn-primary" value="Add" />
+					</form>
+				</td>
 			</tr>
 		</tbody>
 	</table>

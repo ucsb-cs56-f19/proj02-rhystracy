@@ -8,6 +8,7 @@ import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.List;
@@ -26,6 +27,9 @@ import earthquakes.repositories.LocationRepository;
 @Controller
 public class LocationsController {
 
+    @Autowired
+    private ClientRegistrationRepository clientRegistrationRepository;
+
     private LocationRepository locationRepository;
 
     @Autowired
@@ -33,8 +37,7 @@ public class LocationsController {
     this.locationRepository = locationRepository;   
     }
 
-    @Autowired
-    private ClientRegistrationRepository clientRegistrationRepository;
+    
 
     @GetMapping("/locations/search")
     public String getLocationsSearch(Model model, OAuth2AuthenticationToken oAuth2AuthenticationToken, LocSearch locSearch){
@@ -56,6 +59,13 @@ public class LocationsController {
 	    model.addAttribute("places", places);
 
 	    return "locations/results";
+    }
+
+    @PostMapping("/locations/add")
+    public String add(Location location, Model model) {
+      locationRepository.save(location);
+      model.addAttribute("locations", locationRepository.findAll());
+      return "locations/index";
     }
 
     @GetMapping("/locations")
