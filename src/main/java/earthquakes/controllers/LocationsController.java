@@ -19,12 +19,14 @@ import earthquakes.osm.Place;
 
 import com.nimbusds.oauth2.sdk.client.ClientReadRequest;
 
-import earthquakes.entities.Location
+import earthquakes.entities.Location;
 import earthquakes.repositories.LocationRepository;
 
 
 @Controller
 public class LocationsController {
+
+    private LocationRepository locationRepository;
 
     @Autowired
     public LocationsController(LocationRepository locationRepository) {
