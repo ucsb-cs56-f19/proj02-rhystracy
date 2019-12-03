@@ -27,10 +27,10 @@ public class Location{
 		this.id = id;
 	}
 
-	public long getPlaceid(){
+	public long getPlaceId(){
 		return this.placeId;
 	}
-	public void setPlaceid(long placeId){
+	public void setPlaceId(long placeId){
 		this.placeId = placeId;
 	}
 
