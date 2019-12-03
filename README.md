@@ -6,6 +6,7 @@ Running Heroku App: https://cs56-f19-proj02-rhystracy.herokuapp.com/
 Travis CI: https://travis-ci.com/ucsb-cs56-f19/proj02-rhystracy
 
 
+
 A simple Spring Boot webapp using:
 * Thymeleaf templating
 * Pulling in Bootstrap from CDN.
