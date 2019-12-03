@@ -27,6 +27,9 @@ import earthquakes.repositories.LocationRepository;
 @Controller
 public class LocationsController {
 
+    @Autowired
+    private ClientRegistrationRepository clientRegistrationRepository;
+
     private LocationRepository locationRepository;
 
     @Autowired
@@ -34,8 +37,7 @@ public class LocationsController {
     this.locationRepository = locationRepository;   
     }
 
-    @Autowired
-    private ClientRegistrationRepository clientRegistrationRepository;
+    
 
     @GetMapping("/locations/search")
     public String getLocationsSearch(Model model, OAuth2AuthenticationToken oAuth2AuthenticationToken, LocSearch locSearch){
