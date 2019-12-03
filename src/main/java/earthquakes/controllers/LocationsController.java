@@ -19,9 +19,19 @@ import earthquakes.osm.Place;
 
 import com.nimbusds.oauth2.sdk.client.ClientReadRequest;
 
+import earthquakes.entities.Location;
+import earthquakes.repositories.LocationRepository;
+
 
 @Controller
 public class LocationsController {
+
+    private LocationRepository locationRepository;
+
+    @Autowired
+    public LocationsController(LocationRepository locationRepository) {
+    this.locationRepository = locationRepository;   
+    }
 
     @Autowired
     private ClientRegistrationRepository clientRegistrationRepository;
@@ -47,4 +57,12 @@ public class LocationsController {
 
 	    return "locations/results";
     }
+
+    @GetMapping("/locations")
+    public String index(Model model) {
+	    Iterable<Location> locations= locationRepository.findAll();
+	    model.addAttribute("locations", locations);
+	    return "locations/index";
+    }
+    
 }
