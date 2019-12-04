@@ -67,7 +67,7 @@ public class LocationsController {
     @PostMapping("/locations/add")
     public String add(Location location, Model model, OAuth2AuthenticationToken token) {
       String uid = token.getPrincipal().getAttributes().get("uid").toString();
-
+      locations.setUid(uid);
       
       locationRepository.save(location);
       model.addAttribute("locations", locationRepository.findByUid(uid));
