@@ -91,7 +91,7 @@ public class LocationsController {
     }
 
     @GetMapping("/locations/admin")
-    public String index(Model model) {
+    public String admin(Model model) {
 	    Iterable<Location> locations= locationRepository.findAll();
 	    model.addAttribute("locations", locations);
 	    return "locations/admin";
