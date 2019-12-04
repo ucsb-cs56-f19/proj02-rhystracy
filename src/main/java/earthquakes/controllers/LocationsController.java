@@ -75,7 +75,7 @@ public class LocationsController {
     }
 
     @DeleteMapping("/locations/delete/{id}")
-    public String delete(@PathVariable("id") long id, Model model) {
+    public String delete(@PathVariable("id") long id, Model model, OAuth2AuthenticationToken token) {
             String uid = token.getPrincipal().getAttributes().get("id").toString();
 	    
 	    Location location = locationRepository.findById(id)
