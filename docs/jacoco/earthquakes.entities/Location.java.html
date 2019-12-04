@@ -14,6 +14,7 @@ import javax.persistence.Id;
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
+	private String uid;
 	private long placeId;
 	private String name;
 	private double latitude;
@@ -21,38 +22,45 @@ import javax.persistence.Id;
 
 	
 	public long getId(){
-<span class="nc" id="L24">		return this.id;</span>
+<span class="nc" id="L25">		return this.id;</span>
 	}
 	public void setId(long id){
-<span class="nc" id="L27">		this.id = id;</span>
-<span class="nc" id="L28">	}</span>
+<span class="nc" id="L28">		this.id = id;</span>
+<span class="nc" id="L29">	}</span>
 
+	public String getUid(){
+<span class="nc" id="L32">		return this.uid;</span>
+	}
+	public void setUid(String uid){
+<span class="nc" id="L35">		this.uid = uid;</span>
+<span class="nc" id="L36">	}</span>
+	
 	public long getPlaceId(){
-<span class="nc" id="L31">		return this.placeId;</span>
+<span class="nc" id="L39">		return this.placeId;</span>
 	}
 	public void setPlaceId(long placeId){
-<span class="nc" id="L34">		this.placeId = placeId;</span>
-<span class="nc" id="L35">	}</span>
+<span class="nc" id="L42">		this.placeId = placeId;</span>
+<span class="nc" id="L43">	}</span>
 
 	public String getName(){
-<span class="nc" id="L38">		return this.name;</span>
+<span class="nc" id="L46">		return this.name;</span>
 	}
 	public void setName(String name){
-<span class="nc" id="L41">		this.name = name;</span>
-<span class="nc" id="L42">	}</span>
+<span class="nc" id="L49">		this.name = name;</span>
+<span class="nc" id="L50">	}</span>
 
 	public double getLatitude(){
-<span class="nc" id="L45">		return this.latitude;</span>
+<span class="nc" id="L53">		return this.latitude;</span>
 	}
 	public void setLatitude(double latitude){
-<span class="nc" id="L48">		this.latitude = latitude;</span>
-<span class="nc" id="L49">	}</span>
+<span class="nc" id="L56">		this.latitude = latitude;</span>
+<span class="nc" id="L57">	}</span>
 
 	public double getLongitude(){
-<span class="nc" id="L52">		return this.longitude;</span>
+<span class="nc" id="L60">		return this.longitude;</span>
 	}
 	public void setLongitude(double longitude){
-<span class="nc" id="L55">		this.longitude = longitude;</span>
-<span class="nc" id="L56">	}</span>
+<span class="nc" id="L63">		this.longitude = longitude;</span>
+<span class="nc" id="L64">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
